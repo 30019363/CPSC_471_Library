@@ -87,7 +87,21 @@ namespace CPSC_471_Library.Server.Data
                     EventLibraryId = 129129
                 }
             );
-        }
+        
+
+        modelBuilder.Entity<Staff>().HasData(
+                new Staff
+                {
+                    Name = "Bob",
+                    Id = 1,
+                    Staff_num = "1234",
+                    phone_num = "123-456-1111",
+                    position = "employee",
+                    Branch_id = "112"
+                }
+            );
+    }
+        
 
         public DbSet<Book> Books => Set<Book>();
 
